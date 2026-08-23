@@ -1,13 +1,13 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_speed_dial_plus/flutter_speed_dial.dart';
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -37,9 +37,10 @@ class _MyAppState extends State<MyApp> {
 
 class MyHomePage extends StatefulWidget {
   final ValueNotifier<ThemeMode> theme;
-  const MyHomePage({Key? key, required this.theme}) : super(key: key);
+  const MyHomePage({super.key, required this.theme});
+
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
@@ -69,13 +70,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   ];
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        if (isDialOpen.value) {
+    return PopScope(
+      canPop: !isDialOpen.value,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop && isDialOpen.value) {
           isDialOpen.value = false;
-          return false;
         }
-        return true;
       },
       child: Scaffold(
         appBar: AppBar(
@@ -194,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                     child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Text(
-                                            describeEnum(item).toUpperCase())),
+                                            item.name.toUpperCase())),
                                   );
                                 }).toList();
                               },
@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                   .map((item) {
                                 return DropdownMenuItem<SpeedDialDirection>(
                                   value: item,
-                                  child: Text(describeEnum(item).toUpperCase()),
+                                  child: Text(item.name.toUpperCase()),
                                 );
                               }).toList(),
                             ),

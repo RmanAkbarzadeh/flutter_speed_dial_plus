@@ -1,5 +1,3 @@
-library flutter_speed_dial_plus;
-
 import 'package:flutter_speed_dial_plus/src/speed_dial_tooltip.dart';
 import 'package:material_ui/material_ui.dart';
 import 'global_key_extension.dart';
@@ -15,7 +13,7 @@ class BackgroundOverlay extends AnimatedWidget {
   final String? tooltip;
 
   const BackgroundOverlay({
-    Key? key,
+    super.key,
     this.onTap,
     required this.shape,
     required Animation<double> animation,
@@ -25,14 +23,14 @@ class BackgroundOverlay extends AnimatedWidget {
     required this.tooltip,
     this.color = Colors.white,
     this.opacity = 0.7,
-  }) : super(key: key, listenable: animation);
+  }) : super(listenable: animation);
 
   @override
   Widget build(BuildContext context) {
     final Animation<double> animation = listenable as Animation<double>;
     return ColorFiltered(
         colorFilter: ColorFilter.mode(
-            color.withOpacity(opacity * animation.value), BlendMode.srcOut),
+            color.withValues(alpha: opacity * animation.value), BlendMode.srcOut),
         child: Stack(
           fit: StackFit.expand,
           children: [

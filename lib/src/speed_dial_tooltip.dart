@@ -5,10 +5,10 @@ class SpeedDialTooltip extends StatefulWidget {
   final Widget child;
 
   const SpeedDialTooltip({
-    Key? key,
+    super.key,
     required this.message,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   State<SpeedDialTooltip> createState() => _SpeedDialTooltipState();

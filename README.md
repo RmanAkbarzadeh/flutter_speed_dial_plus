@@ -1,21 +1,19 @@
-<h2 align="center">Flutter Speed Dial</h1>
+<h2 align="center">Flutter Speed Dial Plus</h1>
 
 <p align="center">
-Flutter package to render a <a href="https://material.io/design/components/buttons-floating-action-button.html#types-of-transitions">Material Design Speed Dial</a>.
+Flutter package to render a <a href="https://m3.material.io/components/floating-action-button/overview">Material Design Speed Dial</a>.
 </p>
 
 
-## Support the development
+## Based on Flutter Speed Dial
 
-To sustain the development of this library we need someone who can help this library either through code or by donating it. Donation will help us to live up in the world of unmaintained open source packages and to dedicate more time in improving this to live up to the mark. We will also add the name of the contributors or the donaters in the README section.
+This package is based on the original [Flutter Speed Dial](https://pub.dev/packages/flutter_speed_dial) package.
 
-To donate directly you can use below link, don't forget to leave a message there:
+It has been updated and maintained to improve compatibility with the latest Flutter and Dart versions, along with various fixes and improvements.
 
-<a href="https://www.buymeacoffee.com/prateeksunal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+All original copyrights and license terms are preserved. See the `LICENSE` file for details.
 
-Or become a Github [sponser](https://github.com/sponsors/prateekmedia) by clicking on the Sponser button in this repository.
-
-<p align="center"><a href="https://github.com/darioielardi/flutter_speed_dial/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/darioielardi/flutter_speed_dial"/></a> <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/darioielardi/flutter_speed_dial?color=blue"/></a> <a href="https://pub.dev/documentation/flutter_speed_dial/latest/flutter_speed_dial/flutter_speed_dial-library.html"><img alt="Classic API Docs" src="https://img.shields.io/badge/Classic Docs-informational"/></a> <a href="#usage"><img alt="Usage" src="https://img.shields.io/badge/Usage-blue"/></a></p>
+<p align="center"><a href="https://github.com/RmanAkbarzadeh/flutter_speed_dial_plus/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/RmanAkbarzadeh/flutter_speed_dial_plus"/></a> <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/darioielardi/flutter_speed_dial?color=blue"/></a> <a href="#usage"><img alt="Usage" src="https://img.shields.io/badge/Usage-blue"/></a></p>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/41370460/113670683-0de04700-96d3-11eb-8029-aeadf1797b60.gif" height="460">
@@ -26,8 +24,6 @@ Or become a Github [sponser](https://github.com/sponsors/prateekmedia) by clicki
 The SpeedDial widget is built to be placed in the `Scaffold.floatingActionButton` argument, replacing the `FloatingActionButton` widget.
 You can set its position using `Scaffold.floatingActionButtonLocation` argument.
 It can also be used with `Scaffold.bottomNavigationBar` and `Snackbar`.
-
-**Null safety** is available from version **3.0.5** *( It is also backward compatible,  meaning you can use it with non null safe code too )*
 
 #### Labels
 
@@ -110,8 +106,8 @@ See [Example Code](example/lib/main.dart) for more info.
 
 ### Issues & Feedback
 
-Please file an [issue](https://github.com/darioielardi/flutter_speed_dial/issues) to send feedback or report a bug,  
-If you want to ask a question or suggest an idea then you can [open an discussion](https://github.com/darioielardi/flutter_speed_dial/discussions).  
+Please file an [issue](https://github.com/RmanAkbarzadeh/flutter_speed_dial_plus/issues) to send feedback or report a bug,  
+If you want to ask a question or suggest an idea then you can [open an discussion](https://github.com/RmanAkbarzadeh/flutter_speed_dial_plus/discussions).  
 Thank you!
 
 ### Contributing
